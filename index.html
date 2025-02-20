@@ -4,7 +4,7 @@
     <title>Live Train Timetable</title>
     <script>
         async function getTrainData() {
-            const response = await fetch("https://api.transport.nsw.gov.au/v1/timetables?apikey=your_api_key_here");
+            const response = await fetch("https://api.transport.nsw.gov.au/v2/gtfs/realtime?apikey=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkZHVTeHVsWF9OWERrWWYzSVlzZXBvOEFmTUEtUWlNZFJ5S0xkeEgzNWtzIiwiaWF0IjoxNzQwMDE3NDA1fQ.HGzteZWAcjbb0yDJciQ4jgRrnmuCk0XrKa0pT_l9SLM");
             const data = await response.json();
             document.getElementById("trainData").innerText = JSON.stringify(data, null, 2);
         }
